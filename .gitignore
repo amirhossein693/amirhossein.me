@@ -1,0 +1,4 @@
+assets/vendors/
+resources/**
+node_modules
+.sass-cache/
