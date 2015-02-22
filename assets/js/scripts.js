@@ -1,1 +1,0 @@
-!function(a){_papersheet=a(".papersheet"),_trigger=a(".papersheet__trigger"),_trigger.click(function(){_papersheet.hasClass("opened")?(a("body").stop().removeClass("opened"),a(this).parent(".papersheet").stop().removeClass("opened")):(a("body").stop().addClass("opened"),a(this).parent(".papersheet").stop().addClass("opened"))})}(jQuery);
