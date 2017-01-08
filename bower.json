@@ -1,0 +1,24 @@
+{
+  "name": "amirhossein.me",
+  "description": "",
+  "main": "",
+  "authors": [
+    "amirhossein693@gmail.com"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/amirhossein693/amirhossein.me",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/vendors",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery_lazyload": "jquery.lazyload#^1.9.7",
+    "normalize-css": "^5.0.0",
+    "materialize": "^0.97.8"
+  }
+}
