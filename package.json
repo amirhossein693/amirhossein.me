@@ -1,6 +1,14 @@
 {
-  "name": "amirhossein.me",
-  "version": "2.0.0",
+  "name": "amirhossein693",
+  "version": "2.1.0",
+  "description": "Personal Website",
+  "main": "index.js",
+  "author": "amirhossein693@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "serve": "grunt serve",
+    "build": "grunt build"
+  },
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-contrib-clean": "^1.0.0",
@@ -19,5 +27,7 @@
     "imagemin-mozjpeg": "^5.1.0",
     "load-grunt-tasks": "^3.5.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "grunt-cli": "^1.3.2"
+  }
 }
