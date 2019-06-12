@@ -49,7 +49,7 @@ module.exports = function(grunt) {
         expand: true,
         dot: true,
         cwd: 'src/',
-        src: ['*.html'],
+        src: ['*.html', '*.json', '*.xml', '*.ico'],
         dest: 'dist/'
       },
       fonts: {
