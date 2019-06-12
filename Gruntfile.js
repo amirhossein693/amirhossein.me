@@ -46,8 +46,11 @@ module.exports = function(grunt) {
         }],
       },
       build: {
-        src: 'src/index.html',
-        dest: 'dist/index.html'
+        expand: true,
+        dot: true,
+        cwd: 'src/',
+        src: ['*.html'],
+        dest: 'dist/'
       },
       fonts: {
         files: [{
