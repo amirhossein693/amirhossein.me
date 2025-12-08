@@ -60,6 +60,15 @@ module.exports = function(grunt) {
           src: ['fonts/**/*'],
           dest: 'dist/'
         }],
+      },
+      images: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: 'src/',
+          src: ['images/**/*'],
+          dest: 'dist/'
+        }],
       }
     },
 
@@ -81,10 +90,12 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
+        implementation: require('sass'),
         sourceMap: true,
         includePaths: [
           'src/scss',
-          'src/vendors'
+          'src/vendors',
+          'src/vendors/materialize/sass'
         ]
       },
       app: {
@@ -164,8 +175,8 @@ module.exports = function(grunt) {
   grunt.registerTask('build',[
     'clean',
     'copy:build',
-    'imagemin',
     'copy:fonts',
+    'copy:images',
     'sass',
     'useminPrepare',
     'concat',
