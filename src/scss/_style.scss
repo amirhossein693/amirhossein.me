@@ -1,126 +1,185 @@
+:root {
+  --bg: #f3f6fb;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #475467;
+  --primary: #2563eb;
+  --primary-soft: #dbeafe;
+  --border: #e4e7ec;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-    background-color: $color-bg;
-    font-family: Vazir;
-    font-weight: normal;
+  margin: 0;
+  background: radial-gradient(circle at top right, #eaf1ff 0%, #f8fbff 45%, var(--bg) 100%);
+  color: var(--text);
+  font-family: Roboto, Vazir, sans-serif;
+  line-height: 1.7;
 }
 
-ul, ol{
-	padding: 0;
-	direction: rtl;
+.c-profile {
+  padding: 32px 0 48px;
 }
 
-p{
-	direction: rtl;
+.c-layout {
+  display: grid;
+  gap: 20px;
 }
 
-span{
-	direction: rtl;
-}
-
-.c-profile{
-	padding: 25px 0;
-}
-
-.c-profile__name{
-	font-size: 1.6rem;
-	font-weight: bold;
-}
-
-.c-profile__avatar{
-	border: 3px solid white;
-}
-
-.c-portfolio__image{
-	max-height: 200px;
-	overflow: hidden;
-}
-
-.c-portfolio__image img{
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: top;
-	display: block;
-}
-
-.o-collection{
-	border: none;
-}
-
-.o-collectionItem:after{
-	content: " ";
-	clear: both;
-	display: table;
-}
-
-.o-collectionImage{
-	width: 150px;
-	height: 150px;
-	margin: 10px;
-}
-
-.o-collectionValignWrapper{
-	height: 170px;
-	position: relative;
-	padding-right: 170px;
-}
-
-.o-collectionValignBox{
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-}
-
-.o-title{
-	font-size: 1.4rem;
-	font-weight: bold;
-	margin-top: 1rem;
-	margin-bottom: 1.5rem;
-}
-
-.c-skills .card-content {
-	text-align: center;
-	line-height: 2.5;
-	padding: 20px;
-}
-
-.c-skills .card-content strong {
-	margin: 0 8px;
-}
-
-// Modern card styles
 .card {
-	border-radius: 16px !important;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06) !important;
-	transition: all 0.3s ease;
-	overflow: hidden;
-	
-	&:hover {
-		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12), 0 12px 32px rgba(0, 0, 0, 0.1) !important;
-		transform: translateY(-8px);
-	}
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 10px 24px rgba(16, 24, 40, 0.06);
+  background: var(--surface);
 }
 
-.card-panel {
-	border-radius: 16px !important;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+.c-hero,
+.c-section {
+  padding: 24px;
 }
 
-.card-image {
-	border-radius: 16px 16px 0 0 !important;
-	overflow: hidden;
+.c-hero__top {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
-.card-content {
-	border-radius: 0 0 16px 16px !important;
+.c-profile__name {
+  margin: 4px 0 8px;
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.c-profile__avatar {
+  border: 4px solid var(--primary-soft);
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+}
+
+.c-label {
+  margin: 0;
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.c-subtitle,
+.c-about,
+.c-link,
+.collection-item p {
+  color: var(--muted);
+}
+
+.c-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.c-link {
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.o-title {
+  margin: 0 0 14px;
+  font-size: 1.35rem;
+}
+
+.c-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.c-tags li {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid #bfdbfe;
+  background: var(--primary-soft);
+  color: #1e3a8a;
+  font-weight: 500;
 }
 
 .collection {
-	border-radius: 16px !important;
-	overflow: hidden;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 14px;
 }
 
-.collection-item {
-	border-radius: 0 !important;
+.o-collectionItem {
+  padding: 18px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.o-collectionItem:last-child {
+  border-bottom: 0;
+}
+
+.o-collectionItem h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.o-collectionItem p {
+  margin: 6px 0 0;
+}
+
+.c-projects {
+  margin-bottom: 0;
+}
+
+.c-projectCard {
+  height: 100%;
+}
+
+.c-portfolio__image {
+  max-height: 180px;
+  overflow: hidden;
+}
+
+.c-portfolio__image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-title {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .c-profile {
+    padding-top: 16px;
+  }
+
+  .c-hero,
+  .c-section {
+    padding: 18px;
+  }
+
+  .c-profile__name {
+    font-size: 1.7rem;
+  }
 }
